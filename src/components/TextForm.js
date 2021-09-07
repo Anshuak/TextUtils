@@ -60,11 +60,11 @@ export default function TextForm(props) {
                 <div className="mb-3">
                     <textarea className="form-control" id="exampleFormControlTextarea1" rows="8" value={text} placeholder="Enter your text here!" onChange={handleChange} style={textAreaStyle}  ></textarea>
                 </div>
-                <button className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to UpperCase</button>
-                <button className="btn btn-primary mx-1 my-1" onClick={handleLowClick}>Convert to LowerCase</button>
-                <button className="btn btn-primary mx-1 my-1" onClick={handleExtraSpace}>Remove Extra Spaces</button>
-                <button className="btn btn-primary mx-1 my-1" onClick={handleCopy}>Copy Text</button>
-                <button className="btn btn-danger mx-1 my-1" onClick={handleClearText}>Clear Text</button>
+                <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to UpperCase</button>
+                <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleLowClick}>Convert to LowerCase</button>
+                <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleExtraSpace}>Remove Extra Spaces</button>
+                <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleCopy}>Copy Text</button>
+                <button disabled={text.length===0} className="btn btn-danger mx-1 my-1" onClick={handleClearText}>Clear Text</button>
             </div>
             <div className="container my-3">
                 <h2>Text Summary</h2>
